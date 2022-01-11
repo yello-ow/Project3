@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Predict Movie Rank </title>
+</head>
+
+<body>
+    <header>
+        <div class="container" >
+            <h1> 영화 순위 예측 </h1>
+            <nav class="clearfix">
+                <ul class="menu">
+                    <li><a href="#"> Data </a>
+                        <ul class="submenu">
+                            <li><a href="https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do"> 영화 진흥위원회 </a></li> 
+                        </ul>
+                    </li>
+                    <li><a href="#">Movie</a>
+                        <ul class="submenu">
+                            <li><a href="https://movie.naver.com/">네이버 영화</a></li>
+                            <li><a href="https://movie.daum.net/main">다음 영화</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Theater</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.cgv.co.kr/">CGV</a></li>
+                            <li><a href="https://www.lottecinema.co.kr/NLCHS">LotteCinema</a></li>
+                            <li><a href="https://www.megabox.co.kr/">MegaBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Youtube </a>
+                        <ul class="submenu">
+                            <li><a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg/featured">CGV</a></li>
+                            <li><a href="https://www.youtube.com/c/LOTTECINEMA%EB%A1%AF%EB%8D%B0%EC%8B%9C%EB%84%A4%EB%A7%88">LotteCinema</a></li>
+                            <li><a href="https://www.youtube.com/user/onMEGABOX">MegaBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Instagram</a>
+                        <ul class="submenu"> 
+                            <li><a href="https://www.instagram.com/cgv_korea">CGV</a></li>
+                            <li><a href="https://www.instagram.com/lottecinema_official">LotteCinema</a></li>
+                            <li><a href="https://www.instagram.com/megaboxon">MegaBox</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <img id="image" src="{{url_for('static', filename='movie.jpg')}}">
+            <h2> MOVIE BOXOFFICE RANK 🎬 </h2>
+            <div class="form">
+                <form method="POST" action="{{url_for('home')}}">
+                <label for="screen">Daily Screen Count : </label> 
+                <input id="screen" type="number" name='a' placeholder="Screen">
+                <br>
+            
+                <label for="show"> Daily Show Count: </label>
+                <input id="show" type="number" name='b' placeholder="Show">
+                <br>
+                <button id ="button" type="submit"> PREDICT! </button>
+                </form> 
+            </div>
+            <p class="p"> Daily Screen Count : 영화의 1일 최대 스크린 수 </p>
+            <p class="p"> Daily Show Count : 영화의 1일 최대 상영 횟수 </p>
+            <p class="p"> 위의 두가지 변수를 넣고 버튼을 누르면 예상 순위가 출력됩니다.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p> Write by Codestates AIB 5기 김예린 </p>
+            <p> E-mail : dpfls1107@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

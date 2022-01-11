@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="{{url_for('static', filename='after.css')}}">
+    <title> RESULT </title>
+</head>
+
+<body>
+    <header>
+        <div class="container" >
+            <h1> 영화 순위 예측 </h1>
+            <nav class="clearfix">
+                <ul class="menu">
+                    <li><a href="#"> Data </a>
+                        <ul class="submenu">
+                            <li><a href="https://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do"> 영화 진흥위원회 </a></li> 
+                        </ul>
+                    </li>
+                    <li><a href="#">Movie</a>
+                        <ul class="submenu">
+                            <li><a href="https://movie.naver.com/">네이버 영화</a></li>
+                            <li><a href="https://movie.daum.net/main">다음 영화</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Theater</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.cgv.co.kr/">CGV</a></li>
+                            <li><a href="https://www.lottecinema.co.kr/NLCHS">LotteCinema</a></li>
+                            <li><a href="https://www.megabox.co.kr/">MegaBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Youtube </a>
+                        <ul class="submenu">
+                            <li><a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg/featured">CGV</a></li>
+                            <li><a href="https://www.youtube.com/c/LOTTECINEMA%EB%A1%AF%EB%8D%B0%EC%8B%9C%EB%84%A4%EB%A7%88">LotteCinema</a></li>
+                            <li><a href="https://www.youtube.com/user/onMEGABOX">MegaBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">DashBoard</a>
+                        <ul class="submenu"> 
+                            <li><a href="https://yproject3.herokuapp.com/dashboard">CGV</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="result">
+                <h2>  RESULT  </h2>
+                {%if data == 2%}
+                <img class="image" src="https://www.slideteam.net/media/catalog/product/cache/960x720/s/i/silver_trophy_with_number_two_in_between_for_second_position_stock_photo_Slide01.jpg" >
+                <h3> PREDICTION RANK : 2 </h3>
+        
+                {%elif data == 3%}
+                <img class="image" src="https://www.slideteam.net/media/catalog/product/cache/960x720/n/u/number_three_golden_laurel_design_stock_photo_Slide01.jpg">
+                <h3> PREDICTION RANK : 3 </h3>
+        
+                {%elif data == 4%}
+                <img class="image" src="https://www.guardian-angel-reading.com/uploads/2018/07/PA_SEO_363_Number_4-696x245.jpg">
+                <h3> PREDICTION RANK : 4 </h3>
+        
+                {%elif data == 5%}
+                <img class="image" src="https://www.babycentre.co.uk/ims/2015/12/iStock_664429_wide.jpg.pagespeed.ce.5YeaZ5lu_q.jpg" >
+                <h3> PREDICTION RANK : 5 </h3>
+        
+                {%elif data == 6%}
+                <img class="image" src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Fimages.all-free-download.com%2Fimages%2Fgraphiclarge%2Fparis_subway_clip_art_18153.jpg&type=sc960_832" >
+                <h3> PREDICTION RANK : 6 </h3>
+        
+                {%elif data == 7%}
+                <img class="image" src="https://st.depositphotos.com/1561359/4118/v/950/depositphotos_41184851-stock-illustration-3d-shiny-golden-number-7.jpg">
+                <h3> PREDICTION RANK : 7 </h3>
+        
+                {%elif data == 8%}
+                <img class="image" src="https://mysticalnumbers.com/wp-content/uploads/2012/07/Number-8-Meaning-Eight.jpg">
+                <h3> PREDICTION RANK : 8 </h3>
+        
+                {%elif data == 9%}
+                <img class="image" src="https://www.quickanddirtytips.com/sites/default/files/styles/convert_webp_article_main_image/public/images/5432/9.png?itok=B4g7YsbP" >
+                <h3> PREDICTION RANK : 9 </h3>
+        
+                {%elif data >= 10 %}
+                <img class="image" src="https://www.seekpng.com/png/full/117-1171214_college-of-health-gold-number-10-png.png" >
+                <h3> PREDICTION RANK : 10 </h3>
+        
+                {%else%}
+                <img class="image" src="https://www.slideteam.net/media/catalog/product/cache/960x720/g/o/golden_trophy_for_number_one_position_stock_photo_Slide01.jpg">
+                <h3> PREDICTION RANK : 1 </h3>  
+        
+                {%endif%}
+        
+           
+                <button type="button" onclick="location.href='/' "> Go Back </button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p> Write by Codestates AIB 5기 김예린 </p>
+            <p> E-mail : dpfls1107@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>
